@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Calendar Events</title>
+</head>
+<body>
+    <h1>Google Calendar Events</h1>
+    <h2>Access Token: {{ access_token }}</h2>
+    <h2>Events:</h2>
+    <ul>
+        {% for event in events %}
+        <li>
+            <strong>Summary:</strong> {{ event.summary }}<br>
+            <strong>Start Time:</strong> {{ event.start_time }}<br>
+            <strong>End Time:</strong> {{ event.end_time }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
